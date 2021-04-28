@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.ProfileFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/myimageview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:layout_marginLeft="9dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="9dp"
+                android:layout_marginRight="9dp"
+                android:src="@drawable/camera"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnSelectPhoto"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:background="#2e2e2e"
+                app:layout_constraintBottom_toTopOf="@+id/x"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.473"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/myimageview" />
+
+            <Button
+                android:id="@+id/decrease"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+
+                android:layout_marginStart="223dp"
+                android:layout_marginLeft="223dp"
+                android:layout_marginEnd="114dp"
+                android:layout_marginRight="114dp"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:padding="0dp"
+                android:text="-"
+                app:layout_constraintBottom_toBottomOf="@+id/x"
+                app:layout_constraintEnd_toStartOf="@+id/button3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/x" />
+
+            <EditText
+                android:id="@+id/integer_number"
+                android:layout_width="40dp"
+                android:layout_height="49dp"
+
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:text="12pt"
+                android:textSize="5pt"
+                android:textStyle="bold"
+
+                app:layout_constraintBottom_toBottomOf="@+id/decrease"
+                app:layout_constraintEnd_toStartOf="@+id/increase"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/decrease"
+                app:layout_constraintTop_toTopOf="@+id/decrease"
+                app:layout_constraintVertical_bias="0.473" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="14dp"
+                android:layout_marginRight="14dp"
+                android:background="@drawable/black_gradient"
+                android:foreground="@android:drawable/stat_notify_sync"
+                 app:layout_constraintBottom_toBottomOf="@+id/increase"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                android:visibility="invisible"
+                app:layout_constraintStart_toEndOf="@+id/decrease"
+                app:layout_constraintTop_toTopOf="@+id/increase"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/increase"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="52dp"
+
+                android:layout_marginRight="52dp"
+                android:gravity="center|center_horizontal|center_vertical"
+
+                android:padding="0dp"
+                android:text="+"
+                app:layout_constraintBottom_toBottomOf="@+id/integer_number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/integer_number"
+                app:layout_constraintVertical_bias="0.473" />
+
+            <Button
+                android:id="@+id/x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="28dp"
+                android:baselineAligned="false"
+                android:text="Detect Text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@+id/myimageview"></Button>
+
+            <Button
+                android:id="@+id/display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="28dp"
+                android:baselineAligned="false"
+                android:text="Display Text"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/myimageview"></Button>
+
+            <Button
+                android:id="@+id/btnSelectPhoto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:layout_marginLeft="9dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="19dp"
+                android:layout_marginRight="19dp"
+                android:text="Select Photo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/X"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="308dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="58dp"
+                android:layout_marginEnd="9dp"
+                android:layout_marginRight="9dp"
+                android:layout_marginBottom="9dp"
+                android:text=""
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btnSelectPhoto"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/display"></TextView>
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</FrameLayout>

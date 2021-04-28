@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/topLayout"
+    android:layout_width="match_parent"
+    android:keepScreenOn="true"
+    android:background="#C5E1F8"
+
+    android:orientation="horizontal" android:layout_height="match_parent"
+    >
+
+
+
+
+    <com.example.aws.blogapp.camera.CameraSourcePreview
+        android:id="@+id/preview"
+        android:layout_width="match_parent"
+        android:layout_below="@id/x"
+        android:layout_height="wrap_content"
+
+        android:layout_weight="90">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/x"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/b"
+                android:onClick="home"></Button>
+        </LinearLayout>
+        <com.example.aws.blogapp.camera.GraphicOverlay
+            android:id="@+id/graphicOverlay"
+            android:layout_width="match_parent"
+            android:layout_below="@id/b"
+            android:layout_height="wrap_content">
+
+        </com.example.aws.blogapp.camera.GraphicOverlay>
+
+
+    </com.example.aws.blogapp.camera.CameraSourcePreview>
+
+</LinearLayout>
+
+
+
